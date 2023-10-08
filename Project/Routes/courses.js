@@ -53,10 +53,6 @@ router.put('/:id', async (req, res) =>{
     
 if(error){
      res.status(400).send(error.details[0].message)
-}
-
-const category = await Category.findById(req.body.categoryId)
-if(!category) return res.status(400).send('Invalid ID')
 
 
 
